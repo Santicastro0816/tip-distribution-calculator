@@ -75,8 +75,8 @@ function calculateDistribution(totalTips, totalSales){
         name,
         date,
         ampm,
-        totalSales,
-        totalTips,
+        totalSales: totalSales.toFixed(2),
+        totalTips: totalTips.toFixed(2),
         salesPlusTax: dist.salesPlusTax,
         k: dist.k,
         b: dist.b,
@@ -109,6 +109,7 @@ function calculateDistribution(totalTips, totalSales){
     });
   }
 })();
+
 
 
 
