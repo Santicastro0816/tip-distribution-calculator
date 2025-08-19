@@ -93,7 +93,7 @@ function calculateDistribution(totalTips, totalSales){
         serv: money(dist.serv)
       };
 
-      fetch("https://script.google.com/macros/s/AKfycbz5TtIP3tAvG9GfZ8qohZx9a-u4vyf13D_r4oTDgigjtfXWpxNj3mFk78HZTmJ9YzAiWQ/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbyr8siO01Rcm8zUiFFOJtKNyWldLd7f_pATGvr6jeH9xI5-0NMb6N_rCWma60OLJ7M4ow/exec", {
         method: "POST",
         body: JSON.stringify(payload),
         headers: {
@@ -107,4 +107,5 @@ function calculateDistribution(totalTips, totalSales){
     });
   }
 })();
+
 
