@@ -87,18 +87,20 @@ function calculateDistribution(totalTips, totalSales){
       };
 
       // Send to Google Sheets
-      fetch("https://script.google.com/macros/s/AKfycbzltiWFcqDGQOCB9bX3yzUgqvV6zrM6iIeJhGFhHQVl-llD8AAEWVsyiON6XdgiBpgqxg/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-      }).then(() => {
-        console.log("Data saved successfully!");
-      }).catch((err) => {
-        console.error("Error:", err);
-      });
+        fetch("https://script.google.com/macros/s/AKfycbzltiWFcqDGQOCB9bX3yzUgqvV6zrM6iIeJhGFhHQVl-llD8AAEWVsyiON6XdgiBpgqxg/exec", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded" // ✅ avoids preflight
+          },
+          body: new URLSearchParams(payload).toString() // ✅ convert JSON → form-encoded
+        })
+        .then(res => res.text())
+        .then(text => {
+          console.log("Server response:", text);
+        })
+        .catch(err => {
+          console.error("Error sending data:", err);
+        });
 
       document.getElementById("closeResults").addEventListener("click", () => {
         window.location.href = "index.html"; 
@@ -107,5 +109,6 @@ function calculateDistribution(totalTips, totalSales){
     });
   }
 })();
+
 
 
