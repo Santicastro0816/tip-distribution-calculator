@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarrioTip Calculator</title>
+    <link rel="stylesheet" href="DESIGN.CSS">
+</head>
+<body>
+    <div class="title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50%" viewBox="0 0 1425 223" fill="none" class="barrio-logo">
+            <path data-w-id="22a20544-1649-e690-d707-275ed74cb5bb" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M222.556 83.681V27.5969C222.556 12.3563 210.199 0 194.959 0H0V222.556H194.959C210.199 222.556 222.556 210.199 222.556 194.959V138.875C222.556 123.634 210.199 111.278 194.959 111.278C210.199 111.278 222.556 98.9216 222.556 83.681ZM111.278 161.13C103.658 161.13 97.4794 154.952 97.4794 147.332C97.4794 139.712 103.658 133.533 111.278 133.533C118.898 133.533 125.076 139.712 125.076 147.332C125.076 154.952 118.898 161.13 111.278 161.13ZM111.278 61.4254C118.898 61.4254 125.076 67.6035 125.076 75.2239C125.076 82.8442 118.898 89.0223 111.278 89.0223C103.658 89.0223 97.4794 82.8442 97.4794 75.2239C97.4794 67.6035 103.658 61.4254 111.278 61.4254Z" fill="currentColor" class="b"></path>
+            <path data-w-id="1f628de0-472e-7011-f868-0e77cb0e16b2" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M435.319 -6.10352e-05H267.957C252.717 -6.10352e-05 240.36 12.3562 240.36 27.5969V222.556H337.84V147.332C337.84 139.712 344.018 133.533 351.638 133.533C359.259 133.533 365.437 139.712 365.437 147.332V222.556H462.916V27.5969C462.916 12.3562 450.56 -6.10352e-05 435.319 -6.10352e-05ZM351.638 89.0222C344.018 89.0222 337.84 82.8441 337.84 75.2238C337.84 67.6035 344.018 61.4253 351.638 61.4253C359.259 61.4253 365.437 67.6035 365.437 75.2238C365.437 82.8441 359.259 89.0222 351.638 89.0222Z" fill="currentColor" class="a"></path>
+            <path data-w-id="d943649c-7488-5eb7-f65f-58666d01bd17" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M703.276 83.6809V27.5969C703.276 12.3562 690.92 -6.10352e-05 675.68 -6.10352e-05H480.721V222.556H578.2V147.332C578.2 139.712 584.374 133.533 591.999 133.533C599.623 133.533 605.797 139.712 605.797 147.332V222.556H703.276V138.875C703.276 123.634 690.92 111.278 675.68 111.278C690.92 111.278 703.276 98.9215 703.276 83.6809ZM591.999 61.4253C599.619 61.4253 605.797 67.6035 605.797 75.2238C605.797 82.8441 599.619 89.0222 591.999 89.0222C584.378 89.0222 578.2 82.8441 578.2 75.2238C578.2 67.6035 584.374 61.4253 591.999 61.4253Z" fill="currentColor" class="r-1"></path>
+            <path data-w-id="76212f1c-a8a9-8c36-9d2d-c1082e0a93fe" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M943.636 83.6809V27.5969C943.636 12.3562 931.28 -6.10352e-05 916.039 -6.10352e-05H721.08V222.556H818.56V147.332C818.56 139.712 824.738 133.533 832.358 133.533C839.978 133.533 846.156 139.712 846.156 147.332V222.556H943.636V138.875C943.636 123.634 931.28 111.278 916.039 111.278C931.28 111.278 943.636 98.9215 943.636 83.6809ZM832.358 61.4253C839.978 61.4253 846.156 67.6035 846.156 75.2238C846.156 82.8441 839.978 89.0222 832.358 89.0222C824.738 89.0222 818.56 82.8441 818.56 75.2238C818.56 67.6035 824.738 61.4253 832.358 61.4253Z" fill="currentColor" class="r-2"></path>
+            <path data-w-id="821d6f1e-7d65-865b-0273-5f78f1d6b5d5" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M1110.55 111.278C1110.55 118.898 1116.73 125.076 1124.35 125.076H1184V222.556H961.44V125.076H1021.09C1028.71 125.076 1034.88 118.898 1034.88 111.278C1034.88 103.658 1028.71 97.4794 1021.09 97.4794H961.44V-6.10352e-05H1184V97.4794H1124.35C1116.73 97.4794 1110.55 103.658 1110.55 111.278Z" fill="currentColor" class="i"></path>
+            <path data-w-id="5f759f93-dc6f-6263-2ffb-d1012def4e5a" style="transform: translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" d="M1396.76 -6.10352e-05H1229.4C1214.16 -6.10352e-05 1201.8 12.3562 1201.8 27.5969V194.959C1201.8 210.199 1214.16 222.556 1229.4 222.556H1396.76C1412 222.556 1424.36 210.199 1424.36 194.959V27.5969C1424.36 12.3562 1412 -6.10352e-05 1396.76 -6.10352e-05ZM1313.08 89.0222C1305.46 89.0222 1299.28 82.8441 1299.28 75.2238C1299.28 67.6035 1305.46 61.4253 1313.08 61.4253C1320.7 61.4253 1326.88 67.6035 1326.88 75.2238C1326.88 82.8441 1320.7 89.0222 1313.08 89.0222Z" fill="currentColor" class="o"></path>
+        </svg>
+    </div>
+    <form id="tipForm" class="input">
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="input">
+            <label for="date">Date</label>
+            <input type="date" id="date">
+        </div>
+        <div class="input">
+            <label for="ampm">Time</label>
+            <select id="ampm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="TotalSales">Total Sales</label>
+            <input type="number" id="TotalSales" step="0.01">
+        </div>
+        <div class="input">
+            <label for="TotalTips">Total Tips</label>
+            <input type="number" id="TotalTips" step="0.01">
+        </div>
+        <button type="submit">Save & Calculate</button>
+    </form>
+
+    <div id="results"></div>
+    <script src="functions.js"></script>
+</body>
+</html>
