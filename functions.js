@@ -71,43 +71,40 @@ function calculateDistribution(totalTips, totalSales){
       const dist = calculateDistribution(totalTips, totalSales);
       render(name, date, ampm, { totalSales, totalTips }, dist);
 
-      document.getElementById("closeResults").addEventListener("click", () => {
-        window.location.href = "index.html"; // or your main page path
-      });
-
-      // let other scripts (e.g., Google Sheet.js) listen and save
-      document.dispatchEvent(new CustomEvent("tips:calculated", {
-        detail: { name, date, totalSales, totalTips, ...dist }
-      }));
       const payload = {
         name,
         date,
         ampm,
-        totalSales: money(totalSales),
-        salesPlusTax: money(dist.salesPlusTax),
-        k: money(dist.k),
-        b: money(dist.b),
-        s: money(dist.s),
-        m: money(dist.m),
-        totalSalesDistributed: money(dist.totalSalesDistributed),
-        serv: money(dist.serv)
+        totalSales,
+        totalTips,
+        salesPlusTax: dist.salesPlusTax,
+        k: dist.k,
+        b: dist.b,
+        s: dist.s,
+        m: dist.m,
+        totalSalesDistributed: dist.totalSalesDistributed,
+        serv: dist.serv
       };
 
-      fetch("https://script.google.com/macros/s/AKfycbz8OdS1Hta59DX0lBkC0vmY6HKwIaFkrtiKf-Nb2EZlmr5m0eK7Y9tLEwKVuD2vdLujOg/exec", {
+      // Send to Google Sheets
+      fetch("YOUR_GOOGLE_APPS_SCRIPT_URL", {
         method: "POST",
-        body: JSON.stringify(payload),
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json"
-        }
-      })
-      .then(res => res.text())
-      .then(msg => console.log("Saved to Google Sheets:", msg))
-      .catch(err => console.error("Error saving to Google Sheets:", err));
+        },
+        body: JSON.stringify(payload)
+      }).then(() => {
+        console.log("Data saved successfully!");
+      }).catch((err) => {
+        console.error("Error:", err);
+      });
+
+      document.getElementById("closeResults").addEventListener("click", () => {
+        window.location.href = "index.html"; 
+      });
             
     });
   }
 })();
-
-
-
 
