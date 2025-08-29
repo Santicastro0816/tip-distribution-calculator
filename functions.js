@@ -87,7 +87,7 @@ function calculateDistribution(totalTips, totalSales){
       };
 
       // Send to Google Sheets
-        fetch("https://script.google.com/macros/s/AKfycbzltiWFcqDGQOCB9bX3yzUgqvV6zrM6iIeJhGFhHQVl-llD8AAEWVsyiON6XdgiBpgqxg/exec", {
+        fetch("", {
           method: "POST",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded" // ✅ avoids preflight
@@ -109,6 +109,7 @@ function calculateDistribution(totalTips, totalSales){
     });
   }
 })();
+
 
 
 
