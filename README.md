@@ -15,6 +15,6 @@ We can also quote text with >""
 >This is a quote
 
 
-can coute code using '' like 'git commit'
+can coute code using '' like `git status` or `print("Hello World")`
 
 we can use links when they are inside parenthesis like this [Github Pages](https://pages.github.com/)
