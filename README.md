@@ -79,7 +79,7 @@ TEXT 2
 
 # Links to the example headings above
 
-Link to the sample section: [Link Text](#sample-section).
+Link to the sample section: [Link Text](#this-is-just-an-example).
 
 Link to the helpful section: [Link Text](#thisll-be-a-helpful-section-about-the-greek-letter-Θ).
 
