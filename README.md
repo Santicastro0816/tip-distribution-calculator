@@ -31,7 +31,9 @@ we can use links when they are inside parenthesis like this [Github Pages](https
 
 it dosent matter how many lines are between text. we have to add two spaces and then press enter to start a new line in readmes.   
 
-If we want to skip using bold or any markdown character use back slash \*this ignores markdown formating\*
+If we want to skip using bold or any markdown character use back slash \*this ignores markdown formating\*  
+
+ btw, check this link if  you want to add any images to a readme [Adding Images to ReadMe](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#images)
 
 now here is a way to link the heading of the read me file:
 
